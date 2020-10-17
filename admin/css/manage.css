@@ -1,0 +1,10 @@
+.no_data{
+	color: blue;
+	font-size: 16px;
+}
+.delete{
+	color: darkred;
+    text-align: center;
+    margin-top: 5px;
+    font-size: 16px;
+}
