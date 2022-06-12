@@ -175,7 +175,7 @@ include("inc/header.php");
         </tr>
         
       </table>
-      <?
+      <?php
        }
       ?>
          

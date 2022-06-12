@@ -79,7 +79,7 @@ include("inc/header.php");
         
       </table>
       </form>
-      <?
+      <?php
        }
       ?>
 
