@@ -10,7 +10,8 @@ session_start();
 
 
 ?>
-<?php
+ <?php
+ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if(isset($_REQUEST['submit'])){
    	  extract($_REQUEST);
       $password1=md5($password);
@@ -27,55 +28,61 @@ session_start();
           
       }
       else{
-      /*	 echo "<script>";
-      	 echo "alert('no match')";
-      	 echo "</script>";*/
-      	  $msg="Email & Password don\'t match";
-      	 echo  alert::msg($msg);
+      	//   $msg="Email & Password don\'t match";
+      	//  echo  alert::msg($msg);
+		   $_SESSION['error'] = "Email & Password don\'t match";
       }
      
    }  
-
- 
+   header('location:login.php');
+} 
  ?>
 
-<!DOCTYPE html>
-<head>
-<meta charset="utf-8">
-<title>Login</title>
-    <link rel="stylesheet" type="text/css" href="css/stylelogin.css" media="screen" />
+ <!DOCTYPE html>
 
-    <style type="text/css">
-    	.p{
-    		color:#666;
-    		margin-left: 100px;
-    		margin-right: 100px;
-    	}
-    	
-    </style>
-</head>
-<body>
-<div class="container">
-	<section id="content">
-		<form action="login.php" method="post">
-			<h1>Admin Login</h1>
-			<div>
-				<input type="email" placeholder="example@info.com" required="" name="email" value="<?=isset($_COOKIE['email'])?$_COOKIE['email']:'';?>" />
-			</div>
-			<div>
-				<input type="password" placeholder="Password" required="" name="password" value="<?=isset($_COOKIE['password'])?$_COOKIE['password']:'';?>"/>
-			</div>
-			<div>
-				<p class="p"><input type="checkbox" name="remember" value="yes" />REMEMBER ME</p>
-			</div>
-			<div>
-				<input type="submit" name="submit" value="Log in" />
-			</div>
-		</form><!-- form -->
-		<div class="button">
-			<a href="#">codersharif</a>
-		</div><!-- button -->
-	</section><!-- content -->
-</div><!-- container -->
-</body>
-</html>
+ <head>
+     <meta charset="utf-8">
+     <title>Login</title>
+     <!-- <link rel="stylesheet" type="text/css" href="css/stylelogin.css" media="screen" /> -->
+
+     <style type="text/css">
+     .p {
+         color: #666;
+         margin-left: 100px;
+         margin-right: 100px;
+     }
+     </style>
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
+         crossorigin="anonymous">
+ </head>
+
+ <body>
+     <div class="container-fluid">
+         <div class="row" id="content">
+             <div class="col-md-12" class="text-center">
+                 <div class="card col-4" style="top:30%;left:40%">
+                     <div class="card-body">
+                         <h1 class="card-title">Admin Login</h1>
+                         <form action="login.php" method="post">
+                             <div class="form-group">
+                                 <label for="exampleInputEmail1">Email address</label>
+                                 <input type="email" class="form-control" placeholder="example@info.com" required name="email" value="<?=isset($_COOKIE['email'])?$_COOKIE['email']:'';?>" />
+                             </div>
+                             <div class="form-group">
+                                 <label for="exampleInputPassword1">Password</label>
+                                 <input type="password" class="form-control" placeholder="Password" required name="password" value="<?=isset($_COOKIE['password'])?$_COOKIE['password']:'';?>" />
+                             </div>
+                             <div class="form-group form-check">
+                                 <input type="checkbox" name="remember" value="yes" class="form-check-input" id="exampleCheck1">
+                                 <label class="form-check-label" for="exampleCheck1">REMEMBER ME</label>
+                             </div>
+                             <button type="submit" name="submit" class="btn btn-primary">Login</button>
+                         </form>
+                     </div>
+                 </div>
+             </div><!-- content -->
+         </div>
+     </div><!-- container -->
+ </body>
+
+ </html>

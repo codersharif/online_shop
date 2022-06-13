@@ -54,8 +54,8 @@ include ("inc/sidebar.php");
 					<tr>
 						<th>SL</th>
 						<th>Product Name</th>
-						<th>Cat_id</th>
-						<th>Brand_id</th>
+						<th>Catagory</th>
+						<th>Brand</th>
 						<th>Description</th>
 						<th>Price</th>
 						<th>Image</th>
@@ -71,7 +71,6 @@ include ("inc/sidebar.php");
 						foreach ($product_selected as $product_select){
 						$i++;
 						extract($product_select);
-						
 				    ?>
 					
 						<tr class="odd gradeX">
@@ -87,7 +86,7 @@ include ("inc/sidebar.php");
 						<td>$<?=$price;?></td>
 						<td><img src="action/<?=$image;?>" width="40px" height="40px"></td>
 						<td><?=$type==1?'General':'Featured';?></td>
-						<td><a href="product_edit.php?p_edit=<?echo urlencode($product_id);?>">Edit</a> || <a href="productlist.php?del_id=<?echo urlencode($product_id);?>">Delete</a></td>
+						<td><a href="product_edit.php?p_edit=<?=$product_id;?>">Edit</a> || <a href="productlist.php?del_id=<?=$product_id;?>">Delete</a></td>
 					</tr>
 					<?php
 					//end foreach break::::::::::::::::;;;;

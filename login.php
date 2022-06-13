@@ -38,8 +38,7 @@ if (isset($_REQUEST['login'])){
 <div class="main">
 	<div class="content">
 		<div class="login_panel">
-			<h3>Existing Customers</h3>
-			<p>Sign in with the form below.</p>
+			<h3>Existing Users</h3>
 			<h4 style="color: red;"><?=@$field?></h4>
 			<form action="" method="post">
 				<input type="email" name="email" placeholder="E-mail">
@@ -96,7 +95,6 @@ if (isset($_REQUEST['login'])){
 						</tr>
 					</tbody></table>
 					<div class="search"><div><button type="submit" name="submit" class="grey">Create Account</button></div></div>
-					<p class="terms">By clicking 'Create Account' you agree to the <a href="#">Terms &amp; Conditions</a>.</p>
 					<div class="clear"></div>
 				</form>
 			</div>

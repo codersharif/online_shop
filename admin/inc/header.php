@@ -1,9 +1,3 @@
-<?php
- header("Cache-Control: no-cache, must-revalidate");
-  header("Pragma: no-cache"); 
-  header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); 
-  header("Cache-Control: max-age=2592000");
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -42,11 +36,11 @@
         <div class="grid_12 header-repeat">
             <div id="branding">
                 <div class="floatleft logo">
-                    <img src="img/livelogo.png" alt="Logo" />
+                    <img src="img/logo.png" alt="Logo" />
 				</div>
 				<div class="floatleft middle">
-					<h1>sharif with live project</h1>
-					<p>www.codersharif.com</p>
+					<h1>SEU</h1>
+					<p>Online Shop</p>
 				</div>
                 <div class="floatright">
                     <div class="floatleft">
@@ -69,11 +63,6 @@
         <div class="grid_12">
             <ul class="nav main">
                 <li class="ic-dashboard"><a href="dashboard.php"><span>Dashboard</span></a> </li>
-                <li class="ic-form-style"><a href=""><span>User Profile</span></a></li>
-				<li class="ic-typography"><a href="changepassword.php"><span>Change Password</span></a></li>
-                <li class="ic-grid-tables"><a href="inbox.php"><span>Inbox</span></a></li>
-				<li class="ic-grid-tables"><a href="order.php"><span>Order</span></a></li>
-                <li class="ic-charts"><a href=""><span>Visit Website</span></a></li>
             </ul>
         </div>
         <div class="clear">

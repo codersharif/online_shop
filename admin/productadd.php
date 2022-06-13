@@ -73,7 +73,7 @@ include ("inc/sidebar.php");
                             <label>Description</label>
                         </td>
                         <td>
-                            <textarea name="body" class="tinymce" ></textarea>
+                            <textarea name="body" rows="5" cols="50"></textarea>
                         </td>
                     </tr>
                     <tr>

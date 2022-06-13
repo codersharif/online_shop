@@ -91,9 +91,8 @@ include ("inc/sidebar.php");
                             <label>Description</label>
                         </td>
                         <td>
-                            <textarea name="body" class="tinymce" >
-                                <?php echo isset($body)?$body:''; ?>
-                            </textarea>
+                            
+                        <textarea name="body" rows="10" cols="60"><?=$body??''?></textarea>
                         </td>
                     </tr>
                     <tr>
